@@ -14,7 +14,7 @@ const NameList = (props) => {
       >
         <h2>{item.LegalName}</h2>
         <p>Supplier Operating Name: {item.OperatingName}</p>
-        <p>Code: {item.Code}</p>
+
       </div>
     );
   });
