@@ -3,6 +3,7 @@ import Papa from "papaparse";
 import NameList from "./NameList";
 import ContractList from "./ContractList";
 import GeneratePdf from "./GeneratePdf";
+import PreviewLetter from "./PreviewLetter";
 
 function DynamicSearch() {
   let ds = useRef(new Map());
@@ -91,8 +92,11 @@ function DynamicSearch() {
         />
       )}
       {!loading && genPdf && (
-        <GeneratePdf contracts={genPdf} offPdfHandler={offPdfHandler} />
+        <PreviewLetter contracts={genPdf} offPdfHandler={offPdfHandler} />
       )}
+      {/* {!loading && genPdf && (
+        <GeneratePdf contracts={genPdf} offPdfHandler={offPdfHandler} />
+      )} */}
     </div>
   );
 }

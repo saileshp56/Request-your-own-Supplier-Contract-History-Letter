@@ -1,0 +1,24 @@
+table {
+    width: 100%;
+    /* optional, make table full width */
+    border-collapse: collapse;
+    /* collapses border to ensure no double borders */
+    page-break-inside: avoid;
+}
+
+th,
+td {
+    border: 1px solid black;
+    /* gives all cells a border */
+    padding: 10px;
+    /* adds some padding inside cells */
+}
+tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+    /* optional, colors every even row a light gray */
+}
+
