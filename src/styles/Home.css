@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+    font-size: 28px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+ol {
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+.button {
+    color: #fff;
+    background-color: #007BBD;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.list-item {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #f9f9f9;
+}
+
+.download-button {
+    margin: 30px;
+    margin-bottom: 10px;
+    width: 90%;
+    height: 50px;
+
+}
+.download-all-button {
+    margin: 30px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    width: 90%;
+    height: 50px;
+
+}
