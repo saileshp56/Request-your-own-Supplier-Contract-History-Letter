@@ -1,3 +1,0 @@
-I don't need to do searching for now since we're just testing
-We expect multiple companies to have similar names, so first we let them search up the name, and then they select the exact company that they want
-After that we show them all of the contract I guess

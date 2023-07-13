@@ -12,22 +12,12 @@ function DynamicSearch() {
   const [genPdf, setGenPdf] = useState(undefined);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    // fetch("./part-18.csv") // path to your csv file
-    //   .then((response) => response.text())
-    //   .then((data) => {
-    //     const results = Papa.parse(data, { header: true });
-    //     setData(results.data);
-    //     console.log(results);
-    //   });
-  }, []);
-
   const displayPdfHandler = (items) => {
     if (items.length == 0) {
       alert("Please select a contract to download!");
       return;
     }
-    console.log(items);
+    // console.log(items);
     setGenPdf(items);
   };
 
@@ -36,9 +26,9 @@ function DynamicSearch() {
   };
 
   const displayCompanyHandler = (name) => {
-    console.log("disp handler", ds, " and here's name", name);
+    // console.log("disp handler", ds, " and here's name", name);
     let toPass = ds.current.get(name);
-    console.log(toPass);
+    // console.log(toPass);
     setCompanyData(toPass);
   };
 
@@ -69,20 +59,16 @@ function DynamicSearch() {
           }
         }
       });
-      console.log(filteredData);
-      // setToShow((prevToShow) => [...prevToShow, ...filteredData]);
+      // console.log(filteredData);
     }
-    //setToShow with all the ds.current's keys?
-    console.log(ds);
+
+    // console.log(ds);
 
     setToShow(ds.current);
-    console.log(toShow, " <-");
 
-    // setToShow(filteredData);
     setGenPdf(undefined);
     setCompanyData(undefined);
-    // setData(filteredData);
-    setLoading(false); // end loading
+    setLoading(false);
   };
 
   return (

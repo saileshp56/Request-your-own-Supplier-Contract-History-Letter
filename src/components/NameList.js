@@ -1,8 +1,6 @@
 import React from "react";
 
 const NameList = (props) => {
-  console.log("yo", props);
-
   const list = Array.from(props.data.keys()).map((key) => {
     const item = props.data.get(key)[0];
 
@@ -20,8 +18,6 @@ const NameList = (props) => {
       </div>
     );
   });
-
-  console.log(props.data);
 
   return <div className="list-container">{list}</div>;
 };
