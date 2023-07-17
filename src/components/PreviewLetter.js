@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import html2pdf from "html2pdf.js";
+import "../styles/PreviewLetter.css";
 
 const PreviewLetter = (props) => {
   const contentRef = useRef(null);
@@ -81,7 +82,7 @@ Description: The description of the good or service that corresponds to the Good
         </table>
         <br />
 
-        <p>Glossary</p>
+        <p>Glossary:</p>
         {glossaryDisplay.map((paragraph, index) => (
           <p key={index}>{paragraph}</p>
         ))}

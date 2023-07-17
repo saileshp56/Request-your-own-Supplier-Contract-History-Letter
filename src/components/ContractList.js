@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import "../styles/ContractList.css";
 
 const ContractList = (props) => {
   const [list, setList] = useState([]);
@@ -23,22 +24,24 @@ const ContractList = (props) => {
     const temp = Array.from(ds.values()).map((item) => {
       return (
         <div key={item.CONTRACT_NUMBER} className="list-item">
-          <input
-            type="checkbox"
-            onChange={(e) => {
-              if (e.target.checked) {
-                setSelectedContracts((prev) => [...prev, item]);
-              } else {
-                setSelectedContracts((prev) =>
-                  prev.filter(
-                    (contract) =>
-                      contract.CONTRACT_NUMBER !== item.CONTRACT_NUMBER
-                  )
-                );
-              }
-            }}
-          />
-          <h2>{item.OperatingName}</h2>
+          <div className="header">
+            <input
+              type="checkbox"
+              onChange={(e) => {
+                if (e.target.checked) {
+                  setSelectedContracts((prev) => [...prev, item]);
+                } else {
+                  setSelectedContracts((prev) =>
+                    prev.filter(
+                      (contract) =>
+                        contract.CONTRACT_NUMBER !== item.CONTRACT_NUMBER
+                    )
+                  );
+                }
+              }}
+            />
+            <h2>{item.OperatingName}</h2>
+          </div>
           <p>Contract Number: {item.CONTRACT_NUMBER}</p>
           <p>Total Contract Value (CAD): ${item.CUM_VALUE}</p>
           <p>Award Date: {item.AwardDate}</p>

@@ -2,8 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import Papa from "papaparse";
 import NameList from "./NameList";
 import ContractList from "./ContractList";
-import GeneratePdf from "./GeneratePdf";
+
 import PreviewLetter from "./PreviewLetter";
+import "../styles/DynamicSearch.css";
 
 function DynamicSearch() {
   let ds = useRef(new Map());
@@ -76,7 +77,7 @@ function DynamicSearch() {
     <div>
       <input
         type="text"
-        placeholder="Search..."
+        placeholder="Search for a company..."
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />
@@ -94,9 +95,6 @@ function DynamicSearch() {
       {!loading && genPdf && (
         <PreviewLetter contracts={genPdf} offPdfHandler={offPdfHandler} />
       )}
-      {/* {!loading && genPdf && (
-        <GeneratePdf contracts={genPdf} offPdfHandler={offPdfHandler} />
-      )} */}
     </div>
   );
 }

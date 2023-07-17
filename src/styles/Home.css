@@ -4,25 +4,48 @@ body {
 }
 
 .container {
-    max-width: 800px;
-    margin: auto;
+ 
+    margin-left: 150px;
+    margin-right: 100px;
     padding: 20px;
 }
 
-h2 {
-    color: #333;
-    font-size: 28px;
+.container img {
+    margin-right: 20px;
+    margin-left: -20px;
+    margin-top: 19px;
+}
+
+h1 {
+    color: #333333;
+    font-size: 38px;
+    font-family: Lato, sans-serif;
 }
 
 p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.45em;
+    font-family: Noto Sans, sans-serif;
+    color: #333;
+    margin: 0 0 20px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 ol {
-    margin: 20px 0;
-    padding-left: 30px;
+    font-size: 18px;
+        line-height: 1.45em;
+        font-family: Noto Sans, sans-serif;
+        color: #333;
+        margin: 0 0 20px;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
 }
 
 .button {

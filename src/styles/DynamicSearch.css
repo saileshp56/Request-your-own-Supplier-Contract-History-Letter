@@ -1,0 +1,17 @@
+input[type="text"] {
+    width: 20%;
+    height: 50px;
+}
+input::placeholder {
+    font-size: 20px;
+    font-family: Noto Sans, sans-serif;
+    padding-left: 10px;
+
+}
+
+button {
+    background-color: #26374a;
+    height: 55px;
+    width: 5%;
+    color:#fff
+}
