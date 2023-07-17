@@ -21,7 +21,11 @@ h1 {
     font-size: 38px;
     font-family: Lato, sans-serif;
 }
+h2, h3 {
+    color: #333333;
+        font-family: Lato, sans-serif;
 
+}
 p {
     font-size: 18px;
     line-height: 1.45em;

@@ -45,51 +45,52 @@ Description: The description of the good or service that corresponds to the Good
   const glossaryDisplay = glossaryText.split("\n");
   // console.log(props.contracts);
   return (
-    <div>
-      <h1>Preview of:</h1>
-      <div ref={contentRef}>
-        <h1>{title}</h1>
-        <p>{introText}</p>
-        <h3>{tableTitle}</h3>
+    <div className="content-with-watermark">
+      <div style={{ position: "relative", zIndex: 2 }}>
+        <div ref={contentRef}>
+          <h1>{title}</h1>
+          <p>{introText}</p>
+          <h2>{tableTitle}</h2>
 
-        <table>
-          <tr>
-            <th>Contract Number</th>
-            <th>Total Contract Value (CAD)</th>
-            <th>Award Date</th>
-            <th>Client</th>
-            <th>Description</th>
-          </tr>
-          {props.contracts.map((contract) => {
-            let dollarValue = parseFloat(contract.CUM_VALUE).toLocaleString(
-              "en-US",
-              {
-                style: "currency",
-                currency: "USD",
-              }
-            );
+          <table>
+            <tr>
+              <th>Contract Number</th>
+              <th>Total Contract Value (CAD)</th>
+              <th>Award Date</th>
+              <th>Client</th>
+              <th>Description</th>
+            </tr>
+            {props.contracts.map((contract) => {
+              let dollarValue = parseFloat(contract.CUM_VALUE).toLocaleString(
+                "en-US",
+                {
+                  style: "currency",
+                  currency: "USD",
+                }
+              );
 
-            return (
-              <tr>
-                <th>{contract.CONTRACT_NUMBER}</th>
-                <th>{dollarValue}</th>
-                <th>{contract.AwardDate}</th>
-                <th>{contract.customer_name_e}</th>
-                <th>{contract.DESC_LEVEL4_EN}</th>
-              </tr>
-            );
-          })}
-        </table>
-        <br />
+              return (
+                <tr>
+                  <th>{contract.CONTRACT_NUMBER}</th>
+                  <th>{dollarValue}</th>
+                  <th>{contract.AwardDate}</th>
+                  <th>{contract.customer_name_e}</th>
+                  <th>{contract.DESC_LEVEL4_EN}</th>
+                </tr>
+              );
+            })}
+          </table>
+          <br />
 
-        <p>Glossary:</p>
-        {glossaryDisplay.map((paragraph, index) => (
-          <p key={index}>{paragraph}</p>
-        ))}
+          <p>Glossary:</p>
+          {glossaryDisplay.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
+        <button className="download-button" onClick={downloadPdf}>
+          Download My Letter
+        </button>
       </div>
-      <button className="download-button" onClick={downloadPdf}>
-        Download My Letter
-      </button>
     </div>
   );
 };

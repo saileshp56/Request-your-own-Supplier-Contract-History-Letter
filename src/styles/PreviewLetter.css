@@ -5,3 +5,25 @@ tr {
     color: #333;
     
 }
+
+.content-with-watermark {
+    position: relative;
+}
+
+.content-with-watermark::after {
+    content: "Draft";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 40em;
+    font-weight: bold;
+    z-index: 1;
+    transform: rotate(-30deg);
+    pointer-events: none;
+}
